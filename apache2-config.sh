@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cat >> /var/www/html/wp-config.php <<-EOF
+#cat >> /var/www/html/wp-config.php <<-EOF
+cat >> /usr/src/wordpress/wp-config-sample.php <<-EOF
+
 
 /* SMTP Settings */
 add_action( 'phpmailer_init', 'mail_smtp' );
