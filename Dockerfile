@@ -11,6 +11,9 @@ RUN chmod +x /bin/wp-cli.phar /bin/wp
 # Redirect http to https
 COPY [".htaccess", "/usr/src/wordpress"]
 
+# Install plugins
+ADD "plugins/wp-mail-smtp" "/usr/src/wordpress/wp-content/plugins/wp-mail-smtp"
+
 # Setup SMTP running config.sh
 COPY ["apache2-config.sh", "/usr/local/bin/"]
 RUN [ "/usr/local/bin/apache2-config.sh" ]
