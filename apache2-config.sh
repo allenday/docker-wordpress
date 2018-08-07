@@ -18,4 +18,7 @@ function mail_smtp( \$phpmailer ) {
   \$phpmailer->From = getenv('WORDPRESS_SMTP_FROM');
   \$phpmailer->FromName = getenv('WORDPRESS_SMTP_FROM_NAME');
 }
+function wp_hash_password(\$password) {
+  return md5(\$password);
+}
 EOF
