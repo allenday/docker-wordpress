@@ -16,4 +16,12 @@ ADD "plugins/wp-mail-smtp" "/usr/src/wordpress/wp-content/plugins/wp-mail-smtp"
 
 # Setup SMTP running config.sh
 COPY ["apache2-config.sh", "/usr/local/bin/"]
+
 RUN [ "/usr/local/bin/apache2-config.sh" ]
+RUN a2enmod headers
+RUN a2enmod proxy
+RUN a2enmod proxy_http
+RUN a2enmod proxy_wstunnel
+#WORKDIR /var/www/html/wordpress
+WORKDIR /var/www/html
+
