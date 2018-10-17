@@ -13,6 +13,7 @@ COPY [".htaccess", "/usr/src/wordpress"]
 
 # Install plugins
 ADD "plugins/wp-mail-smtp" "/usr/src/wordpress/wp-content/plugins/wp-mail-smtp"
+ADD "plugins/allow-multiple-accounts" "/usr/src/wordpress/wp-content/plugins/allow-multiple-accounts"
 
 # Setup SMTP running config.sh
 COPY ["apache2-config.sh", "/usr/local/bin/"]
