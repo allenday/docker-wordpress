@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #cat >> /var/www/html/wp-config.php <<-EOF
+
 cat >> /usr/src/wordpress/wp-config-sample.php <<-EOF
 
 
