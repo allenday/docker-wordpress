@@ -17,6 +17,7 @@ ADD "plugins/allow-multiple-accounts" "/usr/src/wordpress/wp-content/plugins/all
 ADD "plugins/woocommerce" "/usr/src/wordpress/wp-content/plugins/woocommerce"
 ADD "plugins/woo-confirmation-email" "/usr/src/wordpress/wp-content/plugins/wp-confirmation-email"
 ADD "plugins/wpforms-lite" "/usr/src/wordpress/wp-content/plugins/wpforms-lite"
+ADD "plugins/backupwordpress" "/usr/src/wordpress/wp-content/plugins/backupwordpress"
 
 # Setup SMTP running config.sh
 COPY ["apache2-config.sh", "/usr/local/bin/"]
