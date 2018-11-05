@@ -14,6 +14,9 @@ COPY [".htaccess", "/usr/src/wordpress"]
 # Install plugins
 ADD "plugins/wp-mail-smtp" "/usr/src/wordpress/wp-content/plugins/wp-mail-smtp"
 ADD "plugins/allow-multiple-accounts" "/usr/src/wordpress/wp-content/plugins/allow-multiple-accounts"
+ADD "plugins/woocommerce" "/usr/src/wordpress/wp-content/plugins/woocommerce"
+ADD "plugins/woo-confirmation-email" "/usr/src/wordpress/wp-content/plugins/wp-confirmation-email"
+ADD "plugins/wpforms-lite" "/usr/src/wordpress/wp-content/plugins/wpforms-lite"
 
 # Setup SMTP running config.sh
 COPY ["apache2-config.sh", "/usr/local/bin/"]
