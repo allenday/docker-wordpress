@@ -327,15 +327,18 @@ class XlWUEV_Common {
 	}
 
 	protected static function xlwuev_user_login() {
-		return self::$wuev_user_login;
+		return get_userdata(self::$wuev_user_id)->user_login;
+		//return self::$wuev_user_login;
 	}
 
 	protected static function xlwuev_display_name() {
-		return self::$wuev_display_name;
+		return get_userdata(self::$wuev_user_id)->display_name;
+		//return self::$wuev_display_name;
 	}
 
 	protected static function xlwuev_user_email() {
-		return self::$wuev_user_email;
+		return get_userdata(self::$wuev_user_id)->user_email;
+		//return self::$wuev_user_email;
 	}
 
 	/*
